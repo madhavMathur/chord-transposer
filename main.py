@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-from transpose import transpose
+import transpose
 
 chords_major_sharp = ["E", "F", "F#", "G", "G#", "A", "A#", "B", "C", "C#", "D", "D#"]
 chords_major_flat = ["E", "F", "Gb", "G", "Ab", "A", "Bb", "B", "C", "Db", "D", "Eb"]
@@ -24,7 +24,7 @@ init_prog = input("Enter chords: ").split()
 final_prog = []
 
 for chord in init_prog:
-	transposed_chord = transpose(chord_list, num_chords, chord, interval)
+	transposed_chord = transpose.transpose(chord_list, num_chords, chord, interval)
 	if transposed_chord != 0:
 		final_prog.append(transposed_chord)
 
